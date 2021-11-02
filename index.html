@@ -35,9 +35,8 @@
 <script>
       	$.ajax({
             url: `https://caliph91.github.io/txt/quotes.json`,
-            global: true,
-            type: 'GET',
-            async: false,
+            type: "GET",
+            dataType: "JSON",
             success: function (response) {
             result = response[Math.floor(Math.random() * response.length)]
            document.getElementById("quote").innerHTML = `<p class="mb-0">"${result.quotes}"</p>`
