@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Quotes - Caliph</title>
+<meta name="description" content="Random Quotes">
+<meta name="author" content="Random Quotes">
+	<link type="text/css" href="style.css" rel="stylesheet">
+<link rel="shortcut icon" href="//storage.caliph71.xyz/img/itsuki.jpg" type="image/x-icon">
+<link rel="icon" href="//storage.caliph71.xyz/img/itsuki.jpg" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+           <!-- PAGE TITLE -->
+            <h1 class="page__title my-3 text-center">
+               Random Quotes
+           </h1>
+
+            <!-- BLOCKQUOTE -->
+           <blockquote class="blockquote">
+                <div id="quote"></div>
+                <footer class="blockquote-footer">
+                   By <cite title="Source Title">Caliph</cite>
+                </footer>
+            </blockquote>
+        </div>
+       <center><a href=""><a href=" "><strong><h5>Next Quotes</h5></strong></a></center>
+    </div>
+</div>
+<script>
+      	$.ajax({
+            url: `https://caliph91.github.io/txt/quotes.json`,
+            global: true,
+            type: 'GET',
+            async: false,
+            success: function (response) {
+            result = response[Math.floor(Math.random() * response.length)]
+           document.getElementById("quote").innerHTML = `<p class="mb-0">"${result.quotes}"</p>`
+           }
+        });
+      </script>
+</body>
+</html>
+
