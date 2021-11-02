@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +24,7 @@
            <blockquote class="blockquote">
                 <div id="quote"></div>
                 <footer class="blockquote-footer">
-                   By <cite title="Source Title">Caliph</cite>
+                   By <cite title="Source Title"><div id="author"></cite>
                 </footer>
             </blockquote>
         </div>
@@ -1262,6 +1261,7 @@ let ew = {"quotes":[
   }
 let fajr = ew.quotes[Math.floor(Math.random() * ew.quotes.length)]
 document.getElementById("quote").innerHTML = `<p class="mb-0">  "${fajr.quotes}" </p>`
+document.getElementById("author").innerHTML = fajr.author
 </script>
 </body>
 </html>
